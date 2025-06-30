@@ -1,0 +1,14 @@
+<div class="category-container">
+  @for (category of pCategoryList; track category) {
+    <div class="category-item">
+      <h2>Category: {{category.name}}</h2>
+      <h3>Description: {{category.description}}</h3>
+
+      @if (areActionsAvailable) {
+        <button (click)="callUpdateModalMethod.emit(category)" class="btn btn-success">Edit</button>
+        <button (click)="callDeleteMethod.emit(category)" class="btn btn-danger">Delete</button>
+      }
+    </div>
+  } @empty {
+    <p>No categories available.</p>
+  }

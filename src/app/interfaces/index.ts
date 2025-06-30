@@ -100,6 +100,22 @@ export interface ISportTeam {
   teamLogo?: string;
 }
 
+export interface ICategory {
+  id?: number,
+  name?: string;
+  description?: string;
+}
+
+export interface IProduct {
+  id?: number;
+  name?: string;
+  description?: string;
+  price?: number;
+  quantity?: number;
+  category?: ICategory[];
+
+}
+
 export interface IPlayer {
   id?: number;
   name?: string;

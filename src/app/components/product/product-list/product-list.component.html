@@ -1,0 +1,18 @@
+<div class="product-container">
+  @for(product of pProductList; track product) {
+    <div class="product-item">
+      <h2>Product: {{product.name}}</h2>
+      <h2>Description: {{product.description}}</h2>
+      <p>Price: {{product.price}}</p>
+      <p>Quantity: {{product.quantity}}</p>
+      <p>Category: {{product.category}}</p>
+
+      @if (areActionsAvailable) {
+        <button (click)="callUpdateModalMethod.emit(product)" class="btn btn-success">Edit</button>
+        <button (click)="callDeleteMethod.emit(product)" class="btn btn-danger">Delete</button>
+      }
+    </div>
+  } @empty {
+    <p>No products available.</p>
+  }
+</div>
