@@ -8,7 +8,7 @@ import { AuthService } from '../../../services/auth.service';
   standalone: true,
   imports: [],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+  styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent {
   @Input() pProductList: IProduct[] = [];
